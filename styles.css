@@ -21,17 +21,9 @@ html {
 
 body {
   font-family: "Oswald", "Trebuchet MS", sans-serif;
-  background: var(--black) url("images/logo-fundo.jpg") center top / cover no-repeat fixed;
+  background: var(--black);
   color: var(--cream);
   line-height: 1.55;
-}
-
-body::before {
-  content: "";
-  position: fixed;
-  inset: 0;
-  background: linear-gradient(180deg, rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.82) 42%, #000 100%);
-  z-index: -1;
 }
 
 img {
@@ -91,25 +83,43 @@ a {
 }
 
 .hero {
-  min-height: 88vh;
+  min-height: 100vh;
   display: grid;
-  align-items: end;
-  padding: 40px 0 72px;
+  align-content: center;
+  justify-items: center;
+  padding: 88px 16px 48px;
+  background: var(--black);
+}
+
+.hero-logo {
+  width: min(720px, 86vw);
+  height: min(72vh, 720px);
+  object-fit: contain;
+  object-position: center;
 }
 
 .hero h1 {
-  font-size: clamp(3rem, 10vw, 7rem);
-  line-height: 0.9;
-  text-transform: uppercase;
-  text-shadow: 0 8px 30px rgba(0, 0, 0, 0.7);
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+}
+
+.hero .wrap {
+  text-align: center;
 }
 
 .hero p {
   max-width: 36ch;
-  margin-top: 16px;
+  margin: 16px auto 0;
   font-family: Georgia, serif;
   font-size: 1.2rem;
   color: var(--peach);
+}
+
+.hero .actions {
+  justify-content: center;
 }
 
 .actions {
@@ -317,10 +327,6 @@ section {
 }
 
 @media (max-width: 860px) {
-  body {
-    background-attachment: scroll;
-  }
-
   .menu-btn {
     display: block;
   }
