@@ -26,6 +26,23 @@ body {
   line-height: 1.55;
 }
 
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: url("images/logo-fundo.jpg") center center / contain no-repeat;
+  opacity: 0.26;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.nav,
+main,
+.footer {
+  position: relative;
+  z-index: 1;
+}
+
 img {
   max-width: 100%;
   display: block;
@@ -83,43 +100,25 @@ a {
 }
 
 .hero {
-  min-height: 100vh;
+  min-height: 88vh;
   display: grid;
-  align-content: center;
-  justify-items: center;
-  padding: 88px 16px 48px;
-  background: var(--black);
-}
-
-.hero-logo {
-  width: min(720px, 86vw);
-  height: min(72vh, 720px);
-  object-fit: contain;
-  object-position: center;
+  align-items: end;
+  padding: 40px 0 72px;
 }
 
 .hero h1 {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  overflow: hidden;
-  clip: rect(0 0 0 0);
-}
-
-.hero .wrap {
-  text-align: center;
+  font-size: clamp(3rem, 10vw, 7rem);
+  line-height: 0.9;
+  text-transform: uppercase;
+  text-shadow: 0 8px 30px rgba(0, 0, 0, 0.7);
 }
 
 .hero p {
   max-width: 36ch;
-  margin: 16px auto 0;
+  margin-top: 16px;
   font-family: Georgia, serif;
   font-size: 1.2rem;
   color: var(--peach);
-}
-
-.hero .actions {
-  justify-content: center;
 }
 
 .actions {
