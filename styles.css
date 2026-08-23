@@ -158,6 +158,7 @@ a {
 
 section {
   padding: 72px 0;
+  scroll-margin-top: 80px;
 }
 
 .section-title {
@@ -168,7 +169,8 @@ section {
 
 .lead,
 .card p,
-.band-copy p {
+.band-copy p,
+.historia-copy p {
   font-family: Georgia, serif;
   color: var(--muted);
 }
@@ -284,6 +286,229 @@ section {
 .social-btn.whatsapp:hover { background: #25d366; }
 .social-btn.youtube:hover { background: #ff0000; }
 
+.historia-grid {
+  align-items: start;
+}
+
+.historia-face {
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center;
+  background: #000;
+  border: 3px solid var(--orange);
+  margin-bottom: 16px;
+}
+
+.historia-chat {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.year-rail {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 16px;
+  margin-top: 22px;
+}
+
+.year-rail li {
+  color: rgba(201, 184, 154, 0.45);
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  transition: color 0.35s ease, transform 0.35s ease;
+}
+
+.year-rail li.on {
+  color: var(--orange);
+  transform: translateX(6px);
+}
+
+.wa-phone {
+  width: 100%;
+  height: 640px;
+  display: flex;
+  flex-direction: column;
+  background: #0b141a;
+  border: 3px solid var(--orange);
+  border-radius: 22px;
+  overflow: hidden;
+}
+
+.wa-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-height: 64px;
+  padding: 10px 16px;
+  background: #202c33;
+}
+
+.wa-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center 20%;
+  background: #333;
+}
+
+.wa-who {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.2;
+}
+
+.wa-who strong {
+  font-size: 1rem;
+}
+
+.wa-status {
+  color: #8696a0;
+  font-size: 0.75rem;
+  font-family: Georgia, serif;
+  font-weight: 400;
+}
+
+.wa-thread {
+  flex: 1;
+  overflow-y: auto;
+  padding: 14px 12px 20px;
+  background:
+    radial-gradient(circle at 12% 18%, rgba(255, 255, 255, 0.03) 0 1px, transparent 2px),
+    radial-gradient(circle at 70% 40%, rgba(255, 255, 255, 0.03) 0 1px, transparent 2px),
+    #0b141a;
+  background-size: 48px 48px, 64px 64px, auto;
+}
+
+.wa-day {
+  width: fit-content;
+  margin: 0 auto 14px;
+  padding: 5px 12px;
+  border-radius: 8px;
+  background: #182229;
+  color: #8696a0;
+  font-size: 0.72rem;
+  font-family: "Segoe UI", sans-serif;
+}
+
+.wa-row {
+  display: flex;
+  align-items: flex-end;
+  gap: 6px;
+  margin: 4px 0 8px;
+}
+
+.wa-face {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.wa-row.peter {
+  justify-content: flex-start;
+}
+
+.wa-row.hugo {
+  justify-content: flex-end;
+}
+
+.wa-bubble {
+  max-width: 86%;
+  padding: 7px 10px 5px;
+  border-radius: 10px;
+  font-family: "Segoe UI", "Helvetica Neue", sans-serif;
+  font-size: 0.92rem;
+  line-height: 1.4;
+  color: #e9edef;
+  white-space: pre-wrap;
+  animation: wa-pop 0.28s ease;
+}
+
+.wa-row.peter .wa-bubble {
+  background: #202c33;
+  border-top-left-radius: 0;
+}
+
+.wa-row.hugo .wa-bubble {
+  background: #005c4b;
+  border-top-right-radius: 0;
+}
+
+.wa-meta {
+  display: block;
+  margin-top: 4px;
+  text-align: right;
+  color: #8696a0;
+  font-size: 0.68rem;
+}
+
+.wa-typing {
+  display: inline-flex;
+  gap: 5px;
+  align-items: center;
+  min-height: 18px;
+  padding: 2px 4px;
+}
+
+.wa-typing i {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #8696a0;
+  animation: wa-dot 1s infinite ease-in-out;
+}
+
+.wa-typing i:nth-child(2) { animation-delay: 0.15s; }
+.wa-typing i:nth-child(3) { animation-delay: 0.3s; }
+
+.wa-composer {
+  min-height: 56px;
+  display: flex;
+  align-items: center;
+  padding: 0 18px;
+  background: #202c33;
+  color: #8696a0;
+  font-family: "Segoe UI", sans-serif;
+  font-size: 0.9rem;
+}
+
+.wa-controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+@keyframes wa-pop {
+  from {
+    opacity: 0;
+    transform: translateY(10px) scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes wa-dot {
+  0%, 80%, 100% { opacity: 0.3; transform: translateY(0); }
+  40% { opacity: 1; transform: translateY(-3px); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .wa-bubble,
+  .wa-typing i,
+  .year-rail li {
+    animation: none;
+    transition: none;
+  }
+}
+
 .youtube-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -377,7 +602,20 @@ section {
 
   .about-grid,
   .band-grid,
-  .videos-head {
+  .videos-head,
+  .historia-grid {
     grid-template-columns: 1fr;
+  }
+
+  .year-rail li.on {
+    transform: none;
+  }
+
+  .wa-phone {
+    height: 560px;
+  }
+
+  .wa-controls {
+    justify-content: center;
   }
 }

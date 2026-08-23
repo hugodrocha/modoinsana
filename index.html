@@ -17,6 +17,7 @@
       <button class="menu-btn" type="button" aria-label="Abrir menu">Menu</button>
       <ul class="nav-links">
         <li><a href="#banda">A banda</a></li>
+        <li><a href="#historia">A história</a></li>
         <li><a href="#videos">Vídeos</a></li>
         <li><a href="#agenda">Agenda</a></li>
         <li><a href="#contato">Contato</a></li>
@@ -41,18 +42,59 @@
         <h2 class="section-title">A banda</h2>
         <div class="band-grid">
           <div class="band-copy">
-            <p>Fundada em 2016 na Baixada Fluminense, a Modo InSana leva aos palcos versões próprias dos grandes clássicos do pop rock nacional e internacional. Energia, versatilidade e conversa com a plateia fazem parte do show.</p>
-            <p style="margin-top:14px">À frente está o vocalista Peter Sana, que mantém o projeto vivo há quase uma década, reunindo músicos da cena e da histórica Passarela do Rock, em Mesquita. O repertório passa por Legião Urbana, Paralamas do Sucesso e Engenheiros do Hawaii, e também por Queen, Bon Jovi e Guns N’ Roses.</p>
+            <p>Fundada em 2016 na Baixada Fluminense, a Modo InSana começou como dupla de voz e violão: Peter Sana e Felipe Lopes. Em 2017, a residência aos sábados na antiga Pizzaria Só na Massa, perto da praça dos skates, abriu a primeira formação completa.</p>
+            <p style="margin-top:14px">Hoje o quadro passa por Peter Sana na voz, Raphael Santos na guitarra, Pedro Paulo na bateria e João Paulo (JP) no baixo, com Matheus Palmeira quando a agenda fecha. O som vai do pop rock nacional e internacional — Pearl Jam, Paralamas, Legião, U2, Bon Jovi — até o peso de Black Sabbath, Metallica e SOAD, conforme a casa.</p>
             <div class="chips">
-              <span class="chip">Rock and roll</span>
               <span class="chip">Desde 2016</span>
               <span class="chip">Mesquita · RJ</span>
-              <span class="chip">Passarela do Rock</span>
+              <span class="chip">Voz e violão ao quinteto</span>
+              <span class="chip">Pop rock e peso</span>
             </div>
           </div>
           <figure class="band-photo">
             <img src="images/banda.jpg" alt="Formação da banda Modo InSana no estúdio">
           </figure>
+        </div>
+      </div>
+    </section>
+
+    <section id="historia">
+      <div class="wrap">
+        <h2 class="section-title">A história</h2>
+        <div class="band-grid historia-grid">
+          <div class="band-copy historia-copy">
+            <img class="historia-face" src="images/logo-circulo.png" alt="Logo Modo InSana">
+            <p>Em uma conversa de WhatsApp tentando aprender mais sobre a banda, escutamos nosso vocal e camarada Peter, que estava em uma fila de mercado, contar as histórias através do zap. É bem legal saber da história de uma banda e toda a luta que ela passa. Dá um confere aí.</p>
+            <ol class="year-rail" aria-label="Linha do tempo da banda">
+              <li data-year="2016">2016</li>
+              <li data-year="2017">2017</li>
+              <li data-year="2018">2018</li>
+              <li data-year="2019">2019</li>
+              <li data-year="2021">2021</li>
+              <li data-year="2024">2024</li>
+            </ol>
+          </div>
+          <div class="historia-chat">
+            <div class="wa-phone" role="region" aria-label="Conversa animada sobre a origem da banda">
+              <header class="wa-header">
+                <img class="wa-avatar" src="images/peter.png" alt="Peter Sana">
+                <div class="wa-who">
+                  <strong>Peter Sana</strong>
+                  <span class="wa-status">Modo InSana</span>
+                </div>
+              </header>
+              <div class="wa-thread" id="wa-thread">
+                <div class="wa-day">23 de agosto de 2026</div>
+              </div>
+              <div class="wa-composer" aria-hidden="true">
+                <span>Digite uma mensagem</span>
+              </div>
+            </div>
+            <div class="wa-controls">
+              <button class="btn btn-fire" type="button" id="wa-play">Reproduzir</button>
+              <button class="btn btn-ghost" type="button" id="wa-skip">Pular</button>
+            </div>
+          </div>
         </div>
       </div>
     </section>
