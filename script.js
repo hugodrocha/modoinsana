@@ -99,6 +99,7 @@ const HISTORIA = [
   {
     from: "peter",
     time: "14:39",
+    year: "2026",
     text: "A banda se apresenta nos formatos voz e violão, trio com dois violões, trio acústico com cajon ou com bateria, quarteto com baixo, guitarra e bateria, ou quinteto, acrescentando um guitarrista a mais ou um tecladista, conforme necessidade.",
   },
 ];

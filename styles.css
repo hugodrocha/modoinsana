@@ -327,6 +327,14 @@ section {
   transform: translateX(6px);
 }
 
+.year-rail [data-year="2026"] {
+  letter-spacing: 0.03em;
+}
+
+.year-rail [data-year="2026"].on {
+  transform: none;
+}
+
 .wa-phone {
   width: 100%;
   height: 640px;
