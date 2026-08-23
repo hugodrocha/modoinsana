@@ -273,6 +273,41 @@ section {
 .social-btn.instagram:hover { background: #e4405f; }
 .social-btn.facebook:hover { background: #1877f2; }
 .social-btn.whatsapp:hover { background: #25d366; }
+.social-btn.youtube:hover { background: #ff0000; }
+
+.youtube-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  margin-top: 24px;
+}
+
+.youtube-card {
+  background: #0b0b0b;
+  border: 1px solid rgba(255, 213, 161, 0.18);
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.youtube-card iframe {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border: 0;
+  display: block;
+}
+
+.youtube-card a {
+  display: block;
+  padding: 10px 14px;
+  color: var(--orange);
+  font-size: 0.9rem;
+}
+
+@media (max-width: 860px) {
+  .youtube-grid {
+    grid-template-columns: 1fr;
+  }
+}
 
 .footer {
   padding: 28px 0 40px;
