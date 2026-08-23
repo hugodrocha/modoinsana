@@ -325,6 +325,36 @@ section {
   border-top: 1px solid rgba(255, 213, 161, 0.12);
 }
 
+.footer-dev {
+  margin-top: 12px;
+  color: var(--cream);
+  font-weight: 600;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: center;
+  gap: 18px;
+  margin-top: 14px;
+}
+
+.footer-links a {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--peach);
+}
+
+.footer-links a:hover {
+  color: var(--orange);
+}
+
+.footer-links svg {
+  width: 18px;
+  height: 18px;
+  fill: currentColor;
+}
+
 @media (max-width: 860px) {
   .menu-btn {
     display: block;
